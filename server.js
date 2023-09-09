@@ -57,8 +57,8 @@ app.post("/contact",async(req,res)=>{
       const mailoption={
     
       from:"fiinzet1@gmail.com",
-      to:"taigorad5@gmail.com",
-      //to:"ajit.amane@fiinzet.com",
+      //to:"taigorad5@gmail.com",
+      to:"ajit.amane@fiinzet.com",
     
       subject:"Fiinzet : User Contact Details ",
      // text:JSON.stringify(result1)
@@ -113,8 +113,8 @@ let result1=await result.save()
     const mailoption={
       from:"fiinzet1@gmail.com",
       //to:"priyapkadam1182@gmail.com",
-     to:"taigorad5@gmail.com",
-     //to:"ajit.amane@fiinzet.com",
+    // to:"taigorad5@gmail.com",
+     to:"ajit.amane@fiinzet.com",
    // to:"ajit.amane1901@gmail.com",
     subject:"Fiinzet : User Contact Details",
     text:`Full_Name:${result1.name},
