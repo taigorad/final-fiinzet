@@ -35,21 +35,31 @@ app.post("/contact",async(req,res)=>{
 
  if(result1){
     const transporter = nodemailer.createTransport({
-        service:'gmail',
-        auth: {
-        
-          user: 'ajit.amane1901@gmail.com',
-          pass: 'qchkludmcdmlwuyc'
-        }
+      service : "gmail",
+      host : "smtp.gmail.com",
+      port : 587,
+      secure : false,
+      auth : {
+          // user : 'ajit.amane1901@gmail.com',
+          // pass : 'qchkludmcdmlwuyc'
+          // user : 'er.amantiwari.nodeMailer@gmail.com',
+          // pass : 'gzdblgruttmikgqq'
+          user : "fiinzet1@gmail.com",
+          pass : "neigtfhrbclviexo"
+  
+      },
+      tls :{
+          rejectUnauthorized :true
+      }
       });
     
     
       const mailoption={
     
-      from:"ajit.amane1901@gmail.com",
-      to:"ajit.amane@fiinzet.com",
-   // to:"priyapkadam1182@gmail.com",
-    //to:"ajit.amane1901@gmail.com",
+      from:"fiinzet1@gmail.com",
+      to:"taigorad5@gmail.com",
+      //to:"ajit.amane@fiinzet.com",
+    
       subject:"Fiinzet : User Contact Details ",
      // text:JSON.stringify(result1)
      text:`Name:${result1.name} , 
@@ -81,19 +91,30 @@ let result1=await result.save()
   
  if(result1){
   const transporter = nodemailer.createTransport({
-      service:'gmail',
-      auth: {
-        // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-        user: 'ajit.amane1901@gmail.com',
-        pass: 'qchkludmcdmlwuyc'
-      }
+    service : "gmail",
+    host : "smtp.gmail.com",
+    port : 587,
+    secure : false,
+    auth : {
+        // user : 'ajit.amane1901@gmail.com',
+        // pass : 'qchkludmcdmlwuyc'
+        // user : 'er.amantiwari.nodeMailer@gmail.com',
+        // pass : 'gzdblgruttmikgqq'
+        user : "fiinzet1@gmail.com",
+        pass : "neigtfhrbclviexo"
+
+    },
+    tls :{
+        rejectUnauthorized :true
+    }
     });
   
   
     const mailoption={
-      from:"ajit.amane1901@gmail.com",
+      from:"fiinzet1@gmail.com",
       //to:"priyapkadam1182@gmail.com",
-      to:"ajit.amane@fiinzet.com",
+     to:"taigorad5@gmail.com",
+     //to:"ajit.amane@fiinzet.com",
    // to:"ajit.amane1901@gmail.com",
     subject:"Fiinzet : User Contact Details",
     text:`Full_Name:${result1.name},
